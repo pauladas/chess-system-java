@@ -1,6 +1,5 @@
 package boardgame;
 
-
 public class Board {
 	private Integer rows;
 	private Integer columns;
@@ -20,12 +19,12 @@ public class Board {
 		return columns;
 	}
 
-	public Piece piece(Integer row, Integer columns) {
-		return new Piece(this);
+	public Piece piece(Integer row, Integer column) {
+		return pieces[row][column];
 	}
 
 	public Piece piece(Position position) {
-		return new Piece(this);
+		return pieces[position.getRow()][position.getColumn()];
 	}
 
 	public void placePiece(Piece piece, Position position) {
